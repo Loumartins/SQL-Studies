@@ -1,0 +1,18 @@
+
+SELECT DISTINCT
+       --BusinessEntityID,
+       --PersonType,
+       --TITLE,
+       FirstName,
+       --MiddleName,
+       LastName
+       --ModifiedDate 
+    FROM PERSON.PERSON
+    ORDER BY LastName
+OFFSET 50 ROWS -- IGNORE(PULAR) QUANTIDADE_DE_LINHAS ROWS
+FETCH NEXT 10 ROWS ONLY --EXECUTAS AS PROXIMAS 10 LINHAS SOMENTE
+/*ORDER BY FirstName, --DEFAULT ASC
+          MiddleName DESC, 
+          LastName*/
+-- ORDER BY NUNCA VAI ACIMA DE UM WHERE
+-- TOP NAO PODE SER USADO NA MESMA CONSULTA OU SUBCONSULTA QUE OFFSET
