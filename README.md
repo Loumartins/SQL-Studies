@@ -1,2 +1,2 @@
 # SQL-Studies
-repositorio criado para estudos SQL
+repositorio criado para estudos sobre SQL
