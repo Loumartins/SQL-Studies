@@ -27,4 +27,33 @@ SELECT *
    */
 
    SELECT COUNT (DISTINCT(CITY))
-      FROM PERSON.ADDRESS 
+      FROM Person.Address 
+
+   /*
+   DESAFIO 4-
+   QUAIS SAO AS CIDADES UNICAS CADASTRADAS EM NOSSOS SISTEMA??
+   
+   */
+
+   SELECT  DISTINCT City
+      FROM Person.Address
+
+   /*
+   DESAFIO 5
+   QUANTOS PRODUTOS VERMELHOS TEM PRECO ENTRE 500 A 1000 DOLARES
+   */
+
+   SELECT COUNT (*)
+      FROM Production.Product
+      WHERE Color = 'RED' 
+      AND ListPrice BETWEEN 500 AND 1000
+
+   /*
+   DESAFIO 6 - 
+   QUANTOS PRODUTOS CADASTRADOS TEM A PALAVRA 'ROAD' NO NOME DELES??
+   */
+
+   SELECT Name
+    FROM Production.Product
+    WHERE Name LIKE '%ROAD%'  
+      
