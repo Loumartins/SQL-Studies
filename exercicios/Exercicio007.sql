@@ -18,20 +18,21 @@ SELECT ProductID, AVG(OrderQty) AS [MEDIA]
 
 /*
 Desafio 3
-Quais foram as 10 vendas que no total tiveram os maiores valores de venda (line total) por produto. Do maior valor para o menor valor
+Quais foram as 10 vendas que no total tiveram os maiores valores de venda 
+(line total) por produto. Do maior valor para o menor valor
   */
 
 SELECT TOP 10 ProductID, SUM (LineTotal) AS [SOMA] 
     FROM Sales.SalesOrderDetail
     GROUP BY ProductID
-    ORDER BY SUM(LineTotal) DESC
+    ORDER BY SOMA DESC
 
 /*
 Desafio 4
 Quantos produtos e qual a quantidade media de produtos temos cadastrados nas nossas ordens de serviço ( WorkOrder ), agrupados por productID
 */
 
-SELECT COUNT (ProductID) AS [CONTAGEM], 
+SELECT PRODUCT.ProductID, COUNT (ProductID) AS [CONTAGEM], 
        AVG(OrderQty) AS [MEDIA]
     FROM PRODUCTION.WorkOrder
     GROUP BY ProductID
