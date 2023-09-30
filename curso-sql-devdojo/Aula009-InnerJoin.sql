@@ -15,4 +15,17 @@ SELECT PP.BusinessEntityID,
 
 
 SELECT TOP 5 *
+    FROM Person.Person
+
+SELECT TOP 5 *
     FROM Person.EmailAddress
+
+
+SELECT PP.BusinessEntityID,
+       Title, 
+       FirstName, 
+       MiddleName, 
+       LastName, 
+       EmailAddress, PEA.BusinessEntityID
+    FROM Person.Person AS PP
+    INNER JOIN Person.EmailAddress AS PEA ON PEA.BusinessEntityID = PP.BusinessEntityID
