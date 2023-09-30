@@ -10,7 +10,7 @@ anteriormente a esse agrupamento dos dados
 
 */
 
---quais nomes do sistema tem tem ocorrencia maior que 10
+--quais nomes do sistema tem ocorrencia maior que 10
 
 SELECT *
 FROM INFORMATION_SCHEMA.COLUMNS
